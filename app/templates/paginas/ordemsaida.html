@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - EEEP Adolfo Ferreira de Sousa</title>
+    <link rel="stylesheet" href="{% static 'css/saida.css' %}">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'home' %}"><img src="{% static 'imagens/bg-adolfo.webp' %}" class="logo"></a>
+        <h2 class="title">Ordem de Saída</h2>
+    </header>
+
+    <section class="container">
+        <div class="card" id="primeiro">
+            <h3 class="header">1° Lugar</h3>
+            {% for ordemsaida in primeiro %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="segundo">
+            <h3 class="header">2° Lugar</h3>
+            {% for ordemsaida in segundo %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="terceiro">
+            <h3 class="header">3° Lugar</h3>
+            {% for ordemsaida in terceiro %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="quarto">
+            <h3 class="header">4° Lugar</h3>
+            {% for ordemsaida in quarto %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="quinto">
+            <h3 class="header">5° Lugar</h3>
+            {% for ordemsaida in quinto %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="sexto">
+            <h3 class="header">6° Lugar</h3>
+            {% for ordemsaida in sexto %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="setimo">
+            <h3 class="header">7° Lugar</h3>
+            {% for ordemsaida in setimo %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="oitavo">
+            <h3 class="header">8° Lugar</h3>
+            {% for ordemsaida in oitavo %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="nono">
+            <h3 class="header">9° Lugar</h3>
+            {% for ordemsaida in nono %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="decimo">
+            <h3 class="header">10° Lugar</h3>
+            {% for ordemsaida in decimo %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="decimo_primeiro">
+            <h3 class="header">11° Lugar</h3>
+            {% for ordemsaida in decimo_primeiro %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="decimo_segundo">
+            <h3 class="header">12° Lugar</h3>
+            {% for ordemsaida in decimo_segundo %}
+            <ul>
+                <li><strong>{{ ordemsaida.saida }}</strong></li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <nav class="nav">
+            <div class="btn">
+                <a href="{% url 'cardapio' %}">Voltar para o Cardápio</a>
+                <a href="/admin/">Editar</a>
+            </div>
+        </nav>
+
+    </section>
+
+    <footer>
+        <div class="container1">
+            <div class="column">
+                <h3>Equipe de Desenvolvimento</h3>
+                <p><a class="footer-link" href="https://www.instagram.com/gustav0.cg/" target="_blank" rel="noopener noreferrer">@Gustavo_Cavalcante</a></p>
+            </div>
+            <div class="column">
+                <h3>Escola</h3>
+                <p>EEEP Adolfo Ferreira de Sousa</p>
+                <p>Endereço: Avenida da Abolição, CE-060</p>
+                <p>Email para contato: adolfofs@escola.ce.gov.br</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - EEEP Adolfo Ferreira de Sousa</title>
+    <link rel="stylesheet" href="{% static 'css/cardapio.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'imagens/bg-adolfo.webp'%}">
+</head>
+
+<body>
+   <header>
+        <a href="{% url 'home' %}"><img src="{% static 'imagens/bg-adolfo.webp'%}" class="logo"></a>
+        <h2 class="title">Cardápio da Semana</h2>
+    </header>
+
+    <section class="container">
+
+        <div class="card" id="segunda">
+            <h3 class="header">Segunda-Feira</h3>
+            {% for cardapio in segunda %}
+            <ul>
+                <li><strong>Manhã (Merenda):</strong> {{cardapio.merenda_manha}}</li>
+                <li><strong>Almoço:</strong> {{cardapio.almoco}}</li>
+                <li><strong>Tarde (Merenda):</strong> {{cardapio.merenda_tarde}}</li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="terca">
+            <h3 class="header">Terça-Feira</h3>
+            {% for cardapio in terca %}
+            <ul>
+                <li><strong>Manhã (Merenda):</strong> {{cardapio.merenda_manha}}</li>
+                <li><strong>Almoço:</strong> {{cardapio.almoco}}</li>
+                <li><strong>Tarde (Merenda):</strong> {{cardapio.merenda_tarde}}</li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="quarta">
+            <h3 class="header">Quarta-Feira</h3>
+            {% for cardapio in quarta %}
+            <ul>
+                <li><strong>Manhã (Merenda):</strong> {{cardapio.merenda_manha}}</li>
+                <li><strong>Almoço:</strong> {{cardapio.almoco}}</li>
+                <li><strong>Tarde (Merenda):</strong> {{cardapio.merenda_tarde}}</li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="quinta">
+            <h3 class="header">Quinta-Feira</h3>
+            {% for cardapio in quinta %}
+            <ul>
+                <li><strong>Manhã (Merenda):</strong> {{cardapio.merenda_manha}}</li>
+                <li><strong>Almoço:</strong> {{cardapio.almoco}}</li>
+                <li><strong>Tarde (Merenda):</strong> {{cardapio.merenda_tarde}}</li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="card" id="sexta">
+            <h3 class="header">Sexta-Feira</h3>
+            {% for cardapio in sexta %}
+            <ul>
+                <li><strong>Manhã (Merenda):</strong> {{cardapio.merenda_manha}}</li>
+                <li><strong>Almoço:</strong> {{cardapio.almoco}}</li>
+                <li><strong>Tarde (Merenda):</strong> {{cardapio.merenda_tarde}}</li>
+            </ul>
+            {% endfor %}
+        </div>
+
+        <nav class="nav">
+            <div class="btn">
+                <a href="{% url 'saida' %}">Ordem de Saida</a>
+
+                <a href="/admin/">Editar</a>
+            </div>
+        </nav>
+
+    </section>
+
+    <footer>
+        <div class="container1">
+            <div class="column">
+                <h3>Equipe de Desenvolvimento</h3>
+                <p><a class="footer-link" href="https://www.instagram.com/gustav0.cg/" target="_blank" rel="noopener noreferrer">@Gustavo_Cavalcante</a></p>
+            </div>
+            <div class="column">
+                <h3>Escola</h3>
+                <p>EEEP Adolfo Ferreira de Sousa</p>
+                <p>Endereço: Avenida da Abolição, CE-060</p>
+                <p>Email para contato: adolfofs@escola.ce.gov.br</p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

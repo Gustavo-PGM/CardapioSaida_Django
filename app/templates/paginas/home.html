@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEP Adolfo Ferreira de Sousa</title>
+    <meta name="description" content="Cardápio e Ordem de Saída das Turmas da EEEP Adolfo Ferreira de Sousa">
+    <meta name="keywords" content="EEEP, Adolfo Ferreira de Sousa, Cardápio, Ordem de Saída, Escola">
+    <meta name="author" content="Gustavo_Cavalcante, Wesley_Santos">
+    <link rel="icon" type="image/x-icon" href="{% static 'imagens/bg-adolfo.webp'%}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="title">Cardápio e Saída</h1>
+            <div class="logo"><img src="{% static 'imagens/bg-adolfo.webp' %}" alt="AFS" srcset=""></div>
+        </nav>
+    </header>
+
+
+    <h1>Sejam Bem-Vindos</h1>
+    <section class="container">
+
+    <nav class="column">
+        <div class="btn">
+            <a href="{% url 'saida' %}">Ordem de Saída</a>
+        </div>
+        <div class="btn">
+            <a href="{% url 'cardapio' %}">Cardápio</a>
+        </div>
+        <div class="btn">
+            <a href="admin/">Grêmio</a>
+        </div>
+    </nav>
+</section>
+
+    <footer>
+        <div class="container1">
+            <div class="column">
+                <h3>Equipe de Desenvolvimento</h3>
+                <p><a class="footer-link" href="https://www.instagram.com/gustav0.cg/" target="_blank" rel="noopener noreferrer">@Gustavo_Cavalcante</a></p>
+            </div>
+            <div class="column">
+                <h3>Escola</h3>
+                <p>EEEP Adolfo Ferreira de Sousa</p>
+                <p>Endereço: Avenida da Abolição, CE-060</p>
+                <p>Email para contato: adolfofs@escola.ce.gov.br</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
